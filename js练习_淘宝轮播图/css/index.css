@@ -1,0 +1,100 @@
+.img-wrapper{
+    width: 520px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    margin: 100px auto;
+}
+/* 容器 */
+
+.arw-l{
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 14px;
+    top: 140px;
+    left: -20px;
+    display: none;
+    z-index: 999;
+}
+/* 左箭头容器 */
+
+.arw-l:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* 悬停变深色 */
+
+.arw-r{
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 14px;
+    top: 140px;
+    left: 500px;
+    display: none;
+    z-index: 999;
+}
+/* 右箭头容器 */
+
+.arw-r:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* 悬停变深色 */
+
+.arw-l i{
+    position: absolute;
+    line-height: 30px;
+    color: #fff;
+    font-size: 1px;
+    left: 21px;
+}
+/* 左箭头 */
+
+.arw-r i{
+    position: absolute;
+    line-height: 30px;
+    color: #fff;
+    font-size: 1px;
+    left: 11px;
+}
+/* 右箭头 */
+
+.imges{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 图片 */
+
+.spot{
+    position: absolute;
+    display: flex;
+    /* width: 70px; 一个点14px宽*/
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    top: 250px;
+    left: 220px;
+    justify-content: space-around;
+    align-items: center;
+}
+/* 导航圆点栏 */
+
+.spot li{
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+/* 圆点 */
+
+.current{
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 80, 0) !important;
+    border-radius: 50%;
+}
+/* 焦点圆点 */

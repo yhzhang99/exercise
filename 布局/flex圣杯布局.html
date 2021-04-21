@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left,
+  .right {
+    flex: 0 0 200px; 
+    height: 200px;
+    background-color: coral;
+  }
+
+  .center {
+    flex: 1;
+    width: 100px;
+    background-color: cornflowerblue;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

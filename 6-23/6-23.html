@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="message" @keyup.enter="addtodo">
+    <ul>
+      <li v-for="(item, index) in todo">{{ item }} <a href="#" @click="remove(index)">x</a></li>
+    </ul>
+    <div v-if="todo.length>0">
+      共计{{todo.length}}
+    </div>
+    <div @click="clearall">
+      清空
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: '',
+        todo: []
+      },
+      methods: {
+        addtodo: function() {
+          this.todo.push(this.message);
+          this.message='';
+        },
+
+        remove: function(index) {
+          this.todo.splice(index,1);
+        },
+        clearall: function() {
+          this.todo.splice(0, this.todo.length);
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

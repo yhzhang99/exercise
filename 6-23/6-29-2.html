@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" @keyup.enter="searchWeather" v-model="city">
+    <p @click="changeCity('昆明')">昆明</p>
+    <ul>
+      <li v-for="item in weatherList">
+        日期：{{ item.date }}
+        <!-- 风力：{{ item.fengli }}
+        方向：{{ item.fengxiang }} -->
+        {{ item.high }}
+        {{ item.low }}
+        天气类型：{{ item.type }}
+      </li>
+      <!-- date: "29日星期二"
+      fengli: "
+      <![CDATA[2级]]>"
+      fengxiang: "东风"
+      high: "高温 29℃"
+      low: "低温 24℃"
+      type: "多云" -->
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./6-29-2.js"></script>
+</body>
+</html>
